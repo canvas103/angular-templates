@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Skill Set</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="emp in employees | filter:name">
+        <td>{{ emp.name | uppercase }}</td>
+        <td>{{ emp.class }}</td>
+        <td>{{ emp.address }}</td>
+        <td>
+            <button class="btn" ng-click="editUser({emp:emp})">
+                <span class="glyphicon glyphicon-pencil"></span>  Edit
+            </button>
+        </td>
+        <td>
+            <button class="btn" ng-click="removeUser({emp:emp})">
+                <span class="glyphicon glyphicon-remove"></span>  Delete
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>

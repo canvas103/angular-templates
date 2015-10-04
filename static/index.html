@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css"/>
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css"/>
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="employeeApp">
+<div id="wrapper" ng-class="{'toggled':showAside}">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" ng-click="showAside=!showAside">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand"><a href="#/"> Intersources Inc </a></li>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/dashboard">Dashboard</a></li>
+            <li><a href="#randomUsers">labelSunbeamLayout</a></li>
+            <li><a href="#admin">ADMIN</a></li>
+            <li><a href="#formValidation">FormValidation </a></li>
+            <li><a href="#tabs">Tabs </a></li>
+            <li><a href="#modal">Modal </a></li>
+            <li><a href="#todo">Todo</a></li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href class="btn btn-default pull-left" id="toggle" ng-click="showAside=!showAside">Toggle
+                        Menu</a>
+                    <a href class="btn btn-default pull-right" ng-click="">SignIn</a>
+                    <a href class="btn btn-default pull-right" ng-click="">SignUp</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 align="center" style="background-color:gray;color:white">IT Employees Management</h1>
+                </div>
+            </div>
+            <div ng-view></div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<!--<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>-->
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+<script src="bower_components/chart.js/Chart.js"></script>
+<script src="bower_components/angular-chart.js/angular-chart.js"></script>
+
+<script src="bower_components/d3/d3.js"></script>
+
+<script src="bower_components/nvd3/build/nv.d3.js"></script>
+<script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+<script src="employeeApp.js"></script>
+<script src="js/services/dataService.js"></script>
+<script src="js/controllers/mainController.js"></script>
+<script src="js/controllers/dashboardController.js"></script>
+<script src="js/controllers/newController.js"></script>
+<script src="js/controllers/adminCtrl.js"></script>
+<script src="js/controllers/randomUsersCtrl.js"></script>
+<script src="js/directives/expandingDetailsRow.js"></script>
+<script src="js/directives/emp.js"></script>
+<script src="js/directives/customAttrs.js"></script>
+<script src="js/controllers/editConform.js"></script>
+<script src="js/controllers/validateCtrl.js"></script>
+<script src="js/controllers/tabsCtrl.js"></script>
+<script src="js/controllers/modal.js"></script>
+<script src="js/controllers/todoCtrl.js"></script>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
