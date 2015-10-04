@@ -1,7 +1,8 @@
 {
-	"name":"app_server",
-	"main":"server.js",
-	"dependencies":{
-	     "express":"latest"
-	}
+  "name": "app_server",
+  "main": "server.js",
+  "dependencies": {
+    "calendar": "^0.1.0",
+    "express": "latest"
+  }
 }

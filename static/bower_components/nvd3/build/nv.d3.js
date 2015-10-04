@@ -6085,7 +6085,7 @@ nv.models.lineChart = function() {
         , state = nv.utils.state()
         , defaultState = null
         , noData = null
-        , dispatch = d3.dispatch('tooltipShow', 'tooltipHide', 'stateChange', 'changeState', 'renderEnd','myShow')
+        , dispatch = d3.dispatch('tooltipShow', 'tooltipHide', 'stateChange', 'changeState', 'renderEnd')
         , duration = 250
         ;
 
@@ -6375,12 +6375,13 @@ nv.models.lineChart = function() {
     //------------------------------------------------------------
 
     lines.dispatch.on('elementMouseover.tooltip', function(evt) {
-        //tooltip.data(evt).position(evt.pos).hidden(false);
+        tooltip.data(evt).position(evt.pos).hidden(false);
         dispatch.tooltipShow(evt);
     });
 
     lines.dispatch.on('elementMouseout.tooltip', function(evt) {
-        tooltip.hidden(true)
+        tooltip.hidden(true);
+        dispatch.tooltipShow(evt);
     });
 
     //============================================================
@@ -7835,7 +7836,8 @@ nv.models.multiBar = function() {
             bars
                 .style('fill', function(d,i,j){ return color(d, j, i);  })
                 .style('stroke', function(d,i,j){ return color(d, j, i); })
-                .on('mouseover', function(d,i) { //TODO: figure out why j works above, but not here
+                .on('mouseover', function(d,i) {
+                    console.log(d);
                     d3.select(this).classed('hover', true);
                     dispatch.elementMouseover({
                         data: d,
@@ -8061,7 +8063,7 @@ nv.models.multiBarChart = function() {
         , state = nv.utils.state()
         , defaultState = null
         , noData = null
-        , dispatch = d3.dispatch('stateChange', 'changeState', 'renderEnd')
+        , dispatch = d3.dispatch('stateChange', 'changeState', 'renderEnd','tooltipShow')
         , controlWidth = function() { return showControls ? 180 : 0 }
         , duration = 250
         ;
@@ -8368,11 +8370,14 @@ nv.models.multiBarChart = function() {
             value: chart.y()(evt.data),
             color: evt.color
         };
-        tooltip.data(evt).hidden(false);
+        //tooltip.data(evt).hidden(false);
+        console.log('innv');
+        dispatch.tooltipShow(evt);
     });
 
     multibar.dispatch.on('elementMouseout.tooltip', function(evt) {
         tooltip.hidden(true);
+        dispatch.tooltipShow(evt);
     });
 
     multibar.dispatch.on('elementMousemove.tooltip', function(evt) {
