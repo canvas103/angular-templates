@@ -1,24 +1,24 @@
-# angular-chart.js
+# angular-Chart.js
 
-[![Bower version](https://badge.fury.io/bo/angular-chart.js.svg)](http://badge.fury.io/bo/angular-chart.js)
-[![npm version](https://badge.fury.io/js/angular-chart.js.svg)](http://badge.fury.io/js/angular-chart.js)
-[![Build Status](https://travis-ci.org/jtblin/angular-chart.js.png)](https://travis-ci.org/jtblin/angular-chart.js)
-[![Code Climate](https://codeclimate.com/github/jtblin/angular-chart.js/badges/gpa.svg)](https://codeclimate.com/github/jtblin/angular-chart.js)
-[![Code Coverage](https://d3s6mut3hikguw.cloudfront.net/github/jtblin/angular-chart.js/badges/coverage.svg)](https://codeclimate.com/github/jtblin/angular-chart.js)
+[![Bower version](https://badge.fury.io/bo/angular-Chart.js.svg)](http://badge.fury.io/bo/angular-Chart.js)
+[![npm version](https://badge.fury.io/js/angular-Chart.js.svg)](http://badge.fury.io/js/angular-Chart.js)
+[![Build Status](https://travis-ci.org/jtblin/angular-Chart.js.png)](https://travis-ci.org/jtblin/angular-Chart.js)
+[![Code Climate](https://codeclimate.com/github/jtblin/angular-Chart.js/badges/gpa.svg)](https://codeclimate.com/github/jtblin/angular-Chart.js)
+[![Code Coverage](https://d3s6mut3hikguw.cloudfront.net/github/jtblin/angular-Chart.js/badges/coverage.svg)](https://codeclimate.com/github/jtblin/angular-Chart.js)
 
 Beautiful, reactive, responsive charts for Angular.JS using [Chart.js](http://www.chartjs.org/). 
 
-[Demo](http://jtblin.github.io/angular-chart.js/)
+[Demo](http://jtblin.github.io/angular-Chart.js/)
 
 # Installation
 
 ### bower
 
-    bower install --save angular-chart.js
+    bower install --save angular-Chart.js
 
 ### npm
 
-    npm install --save angular-chart.js
+    npm install --save angular-Chart.js
 
 ### cdn
 
@@ -34,14 +34,14 @@ adding the dependencies for Angular and Chart.js first:
 
 ```html
 <head>
-  <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
+  <link rel="stylesheet" href="bower_components/angular-Chart.js/dist/angular-chart.css" />
 <head>
 <body>
   ...
 </body>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/Chart.js/Chart.min.js"></script>
-  <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+  <script src="bower_components/angular-Chart.js/dist/angular-chart.min.js"></script>
 ```
 
 # Utilisation
@@ -65,7 +65,7 @@ They all use mostly the same API (`[chart-]` indicates an optional but recommend
 and may be removed in a future version.
 
 There is another directive `chart-base` that takes an extra attribute `chart-type` to define the type
-dynamically, see [stacked bar example](http://jtblin.github.io/angular-chart.js/examples/stacked-bars.html).
+dynamically, see [stacked bar example](http://jtblin.github.io/angular-Chart.js/examples/stacked-bars.html).
 
 # Example
 
@@ -79,7 +79,7 @@ dynamically, see [stacked bar example](http://jtblin.github.io/angular-chart.js/
 ## Javascript
 
 ```javascript
-angular.module("app", ["chart.js"])
+angular.module("app", ["Chart.js"])
   // Optional configuration
   .config(['ChartJsProvider', function (ChartJsProvider) {
     // Configure all charts
@@ -125,12 +125,12 @@ Module should work with CommonJS out of the box e.g. [browserify](http://browser
 
 # Reactive
 
-angular-chart.js watch updates on data, series, labels, colours and options and will update, or destroy and recreate, 
+angular-Chart.js watch updates on data, series, labels, colours and options and will update, or destroy and recreate,
 the chart on changes.
 
 # Events
 
-angular-chart.js emits the following events on the `scope` and pass the chart as argument:
+angular-Chart.js emits the following events on the `scope` and pass the chart as argument:
 
 * `create`: when chart is created
 * `update`: when chart is updated
@@ -144,7 +144,7 @@ $scope.$on('create', function (event, chart) {
 **Note**: the event can be emitted multiple times for each chart as the chart can be destroyed and
 created multiple times during angular `watch` lifecycle.
 
-angular-chart.js listen to the scope `destroy` event and destroy the chart when it happens.
+angular-Chart.js listen to the scope `destroy` event and destroy the chart when it happens.
 
 # Colours
 
@@ -162,7 +162,7 @@ including different shades for highlight, fill, stroke, etc.
 
 **For general questions about usage, please use [http://stackoverflow.com/](http://stackoverflow.com/)**
  
-Please check if issue exists first, otherwise open issue in [github](https://github.com/jtblin/angular-chart.js/issues). 
+Please check if issue exists first, otherwise open issue in [github](https://github.com/jtblin/angular-Chart.js/issues).
 **Ensure you add a link to a plunker, jsbin, or equivalent.** 
 Here is a [jsbin template](http://jsbin.com/dufibi/3/edit?html,js,output) for convenience.
 
@@ -195,7 +195,7 @@ Pull requests welcome!
 
 ## Contributors
 
-Thank you to the [contributors](https://github.com/jtblin/angular-chart.js/graphs/contributors)!
+Thank you to the [contributors](https://github.com/jtblin/angular-Chart.js/graphs/contributors)!
 
 # Author
 
@@ -203,5 +203,5 @@ Jerome Touffe-Blin, [@jtblin](https://twitter.com/jtblin), [About me](http://abo
 
 # License
 
-angular-chart.js is copyright 2015 Jerome Touffe-Blin and contributors. 
+angular-Chart.js is copyright 2015 Jerome Touffe-Blin and contributors.
 It is licensed under the BSD license. See the include LICENSE file for details.

@@ -9,6 +9,7 @@
     "angular-chart.js": "~0.8.4",
     "chart.js": "~0.1.0",
     "Chart.js": "~1.0.2",
-    "TimelineJS": "timeline.js#~2.36.0"
+    "TimelineJS": "timeline.js#~2.36.0",
+    "underscore": "~1.8.3"
   }
 }

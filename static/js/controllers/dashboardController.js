@@ -69,14 +69,14 @@ app.controller('dashboardController', function ($scope) {
                         }
                     },
                     tooltip: {
-                        enabled: false
+                        enabled: true
                     }
                 },
                 tooltip: {
-                    contentGenerator: function (obj) {
-                        $scope.index = obj.index;
-                        $scope.detail();
-                    },
+                    //contentGenerator: function (obj) {
+                    //    $scope.index = obj.pointIndex;
+                    //    $scope.detail();
+                    //},
                     enable: true
                 },
                 //tooltips:false,
@@ -86,7 +86,8 @@ app.controller('dashboardController', function ($scope) {
                         $scope.detail();
                     },
                     tooltipShow:function(e){
-                        console.log(e);
+                        $scope.index = e.index || e.pointIndex;
+                        $scope.detail();
                     },
                     elementMouseover:function(e){
                         console.log(e);
@@ -158,5 +159,33 @@ app.controller('dashboardController', function ($scope) {
                 disabled: $scope.nvd3Line.state[2]
             }];
         $scope.$digest();
+    };
+    $scope.myD3Bar={
+        data: _.map(_.range(20), function (i) {
+            return Math.random() * 100;
+        }),
+        updateData:function(){
+            $scope.myD3Bar.data=_.map(_.range(20), function (i) {
+                return Math.random() * 100;
+            });
+        }
+    };
+    $scope.myD3Dots={
+        data:_.map(_.range(30), function (i) {
+            return {
+                x: Math.round(Math.random() * 100),
+                y: Math.round(Math.random() * 100),
+                r: Math.round(Math.random() * 10 + 5)
+            }
+        }),
+        updateData:function(){
+            $scope.myD3Dots.data=_.map(_.range(30), function (i) {
+                return {
+                    x: Math.round(Math.random() * 100),
+                    y: Math.round(Math.random() * 100),
+                    r: Math.round(Math.random() * 10 + 5)
+                }
+            });
+        }
     }
 });

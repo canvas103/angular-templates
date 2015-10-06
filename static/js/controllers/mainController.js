@@ -18,5 +18,5 @@ app.controller('mainController', function($scope, Data,$location) {
 		$scope.employees.splice($scope.employees.indexOf(emp), 1);
 	};
 	console.log($scope.employees);
-	//$scope.$$destroyed=true;
+	$scope.$$destroyed=true;
 });

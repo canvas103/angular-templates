@@ -2,7 +2,7 @@
   'use strict';
   if (typeof exports === 'object') {
     // Node/CommonJS
-    module.exports = factory(require('angular'), require('chart.js'));
+    module.exports = factory(require('angular'), require('Chart.js'));
   }  else if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(['angular', 'chart'], factory);
@@ -44,10 +44,10 @@
     .directive('chartPolarArea', function (ChartJsFactory) { return new ChartJsFactory('PolarArea'); });
 
   /**
-   * Wrapper for chart.js
+   * Wrapper for Chart.js
    * Allows configuring chart js using the provider
    *
-   * angular.module('myModule', ['chart.js']).config(function(ChartJsProvider) {
+   * angular.module('myModule', ['Chart.js']).config(function(ChartJsProvider) {
    *   ChartJsProvider.setOptions({ responsive: true });
    *   ChartJsProvider.setOptions('Line', { responsive: false });
    * })))

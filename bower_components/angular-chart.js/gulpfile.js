@@ -53,7 +53,7 @@
   });
 
   gulp.task('cover', shell.task([
-    './node_modules/istanbul/lib/cli.js instrument angular-chart.js > test/fixtures/coverage.js'
+    './node_modules/istanbul/lib/cli.js instrument angular-Chart.js > test/fixtures/coverage.js'
   ]));
 
   gulp.task('unit', shell.task([
@@ -74,13 +74,13 @@
   gulp.task('bump-major', bump('major'));
 
   gulp.task('bower', function () {
-    return gulp.src('./angular-chart.js')
+    return gulp.src('./angular-Chart.js')
       .pipe(ngAnnotate({ single_quotes: true }))
       .pipe(gulp.dest('./dist'));
   });
 
   gulp.task('js', ['lint', 'style', 'bower'], function () {
-    return gulp.src('./angular-chart.js')
+    return gulp.src('./angular-Chart.js')
       .pipe(rename('angular-chart.min.js'))
       .pipe(ngAnnotate({ single_quotes: true }))
       .pipe(sourcemaps.init())
@@ -91,7 +91,7 @@
 
   gulp.task('build', function () {
     return gulp.src(['dist/*', '!./dist/*.tar.gz'])
-      .pipe(tar('angular-chart.js.tar'))
+      .pipe(tar('angular-Chart.js.tar'))
       .pipe(gzip({ gzipOptions: { level: 9 } }))
       .pipe(gulp.dest('dist/'));
   });
