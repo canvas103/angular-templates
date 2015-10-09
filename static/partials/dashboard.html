@@ -4,7 +4,8 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <span>Chart</span>
-                <select ng-model="chartDoughnut.type" ng-options="type for type in chartDoughnut.types"> </select>
+                <select ng-model="chartDoughnut.type" ng-options="type for type in chartDoughnut.types">
+                </select>
             </div>
             <div class="panel-body">
                 <canvas class="chart-base" chart-type="chartDoughnut.type" chart-data="chartDoughnut.data"

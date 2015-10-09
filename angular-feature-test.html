@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body >
+<div>132131</div>
+<div ng-app="">
+<p>Try to change the names.</p>
+
+<div ng-controller="ctrl1">
+
+    First Name: <input type="text" ng-model="firstName"><br>
+    Last Name: <input type="text" ng-model="lastName"><br>
+    <br>
+    <button ng-click="sayHello()">Say Hello</button>
+    <br>
+    Full Name: {{firstName + " " + lastName}}
+
+</div>
+<br/>
+
+<div ng-controller="ctrl2">
+    <h2> List View </h2>
+    <ol>
+        <li ng-repeat="obj in names">
+            {{obj}}
+        </li>
+    </ol>
+</div>
+<!--<div ng-init="x=[1,2,3,4]">-->
+<div>
+<div ng-repeat="y in [1,2,3,4]">{{y}}</div>
+</div>
+</div>
+<script>
+    function ctrl1($scope) {
+        $scope.firstName = "";
+        $scope.lastName = "";
+
+        $scope.sayHello = function () {
+            alert("Hello " + $scope.firstName);
+        };
+        console.log($scope);
+    }
+
+    function ctrl2($scope) {
+
+        $scope.names = ["John", "Smith", "Vicky", "New Guy"];
+    }
+
+    var scope = {};
+    ctrl1(scope);
+    console.log(scope);
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+</body>
+</html>
