@@ -17,6 +17,6 @@ app.controller('mainController', function($scope, Data,$location) {
 		console.log('clicked',emp);
 		$scope.employees.splice($scope.employees.indexOf(emp), 1);
 	};
-	console.log($scope.employees);
-	$scope.$$destroyed=true;
+	//console.log($scope.employees);
+	//$scope.$$destroyed=true;
 });
